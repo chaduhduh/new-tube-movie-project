@@ -1,15 +1,16 @@
 import webbrowser
 import os
 import re
+import templater
 
-# Gather the needed templates
-main_page_head = open('./views/header.html', 'r').read()
+# Gather the needed templates | refrenced docs.python.org
+main_page_head = templater.open_template("header")
 
 # The main page layout and title bar
-main_page_content = open('./views/body.html', 'r').read()
+main_page_content = templater.open_template("body")
 
 # A single movie entry html item
-movie_tile_content = open('./views/movie-item.html', 'r').read()
+movie_tile_content = templater.open_template("movie-item")
 
 
 def create_movie_tiles_content(movies):
@@ -35,7 +36,7 @@ def create_movie_tiles_content(movies):
 
 def open_movies_page(movies):
     # Create or overwrite the output file
-    output_file = open('fresh_tomatoes.html', 'w')
+    output_file = open('./fresh_tomatoes.html', 'w')
 
     # Replace the movie tiles placeholder generated content
     rendered_content = main_page_content.format(

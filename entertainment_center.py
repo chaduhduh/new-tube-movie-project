@@ -44,8 +44,6 @@ dumb_and_dumber = media.Media({
 	})
 addMovie(video_list, dumb_and_dumber)
 
-
-
 #fill template with our data
 fresh_tomatoes.open_movies_page(video_list)
 
