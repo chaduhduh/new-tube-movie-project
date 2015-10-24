@@ -3,18 +3,9 @@ import os
 import re
 import templater
 
-# Gather the needed templates | refrenced docs.python.org
-main_page_head = templater.open_template("header")
-
-# The main page layout and title bar
-main_page_content = templater.open_template("body")
-
-# A single movie entry html item
-movie_tile_content = templater.open_template("movie-item")
-
 
 def create_movie_tiles_content(movies):
-    # The HTML content for this section of the page
+    # Builds the HTML content for each individual movie item
     content = ''
     for movie in movies:
         # Extract the youtube ID from the url
@@ -25,12 +16,13 @@ def create_movie_tiles_content(movies):
         trailer_youtube_id = (youtube_id_match.group(0) if youtube_id_match
                               else None)
 
-        # Append the tile for the movie with its content filled in
-        content += movie_tile_content.format(
-            movie_title=movie.title,
-            poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
-        )
+        # fill a movie item with 'this' round of data
+        content += templater.fill_template("movie-item",
+            {
+            "movie_title" : movie.title,
+            "poster_image_url" : movie.poster_image_url,
+            "trailer_youtube_id" : trailer_youtube_id
+            })
     return content
 
 
@@ -38,10 +30,12 @@ def open_movies_page(movies):
     # Create or overwrite the output file
     output_file = open('./fresh_tomatoes.html', 'w')
 
-    # Replace the movie tiles placeholder generated content
-    rendered_content = main_page_content.format(
-        movie_tiles=create_movie_tiles_content(movies))
-
+    # get page content and fill templates for each section
+    main_page_head = templater.fill_template("header", {}) # templater.open_template could be used here as well
+    rendered_content = ""
+    rendered_content = templater.fill_template("body",
+        {"movie_tiles" : create_movie_tiles_content(movies)})
+    
     # Output the file
     output_file.write(main_page_head + rendered_content)
     output_file.close()
