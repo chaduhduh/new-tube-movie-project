@@ -1,6 +1,7 @@
 """Creates Movie Instances.
 
-Generates a set of movies as a list of Media objects
+Stores a set of movies as a list of Media objects to
+display in a web page.
 """
 
 
@@ -11,7 +12,7 @@ def addMovie(video_list, video_to_add):
 	"""Adds an object to specified list"""
 	video_list.append(video_to_add)
 
-#main code
+#start main code
 video_list = [];
 
 #init movie
@@ -22,7 +23,7 @@ oceans_eleven = media.Media({
 	"poster_image_url" : "./img/poster-image-oceans-eleven.jpg", 
 	"rating" : 5
 	})
-#add to list .. 
+#add to list video list
 addMovie(video_list, oceans_eleven)
 
 #repeat below for the rest of the movies
@@ -31,9 +32,10 @@ sharknado = media.Media({
 	"trailer_youtube_url" : "https://www.youtube.com/watch?v=1hEZkkqjSfs",
 	"storyline" : "Tornados filled with sharks... Enough Said!", 
 	"poster_image_url" : "./img/poster-image-sharknado.jpg", 
-	"rating" : 5
+	"rating" : 2
 	})
 addMovie(video_list, sharknado)
+
 dumb_and_dumber = media.Media({
 	"title" : "Dumb and Dumber", 
 	"trailer_youtube_url" : "https://www.youtube.com/watch?v=l13yPhimE3o",
@@ -44,7 +46,7 @@ dumb_and_dumber = media.Media({
 	})
 addMovie(video_list, dumb_and_dumber)
 
-#fill template with our data
+#pass our movie list content to be used in page generation
 fresh_tomatoes.open_movies_page(video_list)
 
 

@@ -1,5 +1,17 @@
+/* 
+| - - - - - - - - - - - - - - - - -
+| Site CSS and Boostrap Overwrites
+| - - - - - - - - - - - - - - - - -
+*/
 body {
     padding-top: 80px;
+    background-color: #eee;
+}
+.container{
+    background-color: #fff;
+}
+.container.content{
+    box-shadow: 0 1px 10px -7px #212121;
 }
 #trailer .modal-dialog {
     margin-top: 200px;
@@ -18,11 +30,44 @@ body {
 }
 .movie-tile {
     margin-bottom: 20px;
+    padding-bottom: 20px;
     padding-top: 20px;
 }
 .movie-tile:hover {
     background-color: #EEE;
     cursor: pointer;
+}
+.movie-tile h2{
+    font-size: 22px;
+    margin: 12px 0 7px;
+}
+.movie-tile p{
+    font-size: 11px;
+}
+.movie-tile img{
+    width: 100%;
+    height: auto;
+}
+.movie-tile .rating{}
+.movie-tile .rating span{
+    font-family: fontAwesome;
+    font-size: 20px;
+    color: #A80000;
+}
+.movie-tile .rating span::after{
+    content: "\f005\f006\f006\f006\f006";
+}
+.movie-tile .rating span.stars-5::after{
+    content: "\f005\f005\f005\f005\f005";
+}
+.movie-tile .rating span.stars-4::after{
+    content: "\f005\f005\f005\f005\f006";
+}
+.movie-tile .rating span.stars-3::after{
+    content: "\f005\f005\f005\f006\f006";
+}
+.movie-tile .rating span.stars-2::after{
+    content: "\f005\f005\f006\f006\f006";
 }
 .scale-media {
     padding-bottom: 56.25%;
@@ -36,4 +81,31 @@ body {
     left: 0;
     top: 0;
     background-color: white;
+}
+body .navbar-inverse .navbar-brand{
+    color: #000;
+    text-shadow: none;
+}
+body .navbar-inverse .navbar-brand:hover{
+    color: #A80000;
+}
+.navbar-brand img{
+    max-width: 50px;
+    margin-right: 10px;
+}
+.navbar-inverse {
+    background-color: #fff;
+    background-image: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.29);
+    height: 79px;
+    margin-bottom: 20px;
+}
+.navbar-inverse .navbar-header{
+    display: block;
+    float: none;
+    margin: 0 auto;
+    max-width: 100%;
+    position: relative;
+    width: 1200px;
 }

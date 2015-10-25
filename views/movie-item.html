@@ -1,4 +1,11 @@
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{0[trailer_youtube_id]}" data-toggle="modal" data-target="#trailer">
+<!-- individual movie grid item -->
+<div class="col-md-3 col-lg-2 movie-tile" data-trailer-youtube-id="{0[trailer_youtube_id]}" data-toggle="modal" data-target="#trailer">
     <img src="{0[poster_image_url]}" width="220" height="342">
     <h2>{0[movie_title]}</h2>
+    <p>
+    	{0[storyline]}
+    </p>
+    <div class="rating">
+    	<span class="stars-{0[rating]}" title="Rating : {0[rating]} Stars"></span>
+    </div>
 </div>

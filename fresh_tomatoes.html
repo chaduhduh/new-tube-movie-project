@@ -7,6 +7,9 @@
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- main css file -->
     <link rel="stylesheet" href="./css/site.css">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -53,23 +56,44 @@
     <!-- Main Page Content -->
     <div class="container">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
-          </div>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+              <img src="./img/logo.png" /> New Tube
+          </a>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="imm6OR605UI" data-toggle="modal" data-target="#trailer">
+    <div class="container content">
+      <!-- individual movie grid item -->
+<div class="col-md-3 col-lg-2 movie-tile" data-trailer-youtube-id="imm6OR605UI" data-toggle="modal" data-target="#trailer">
     <img src="./img/poster-image-oceans-eleven.jpg" width="220" height="342">
     <h2>Ocean's 11</h2>
-</div><div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="1hEZkkqjSfs" data-toggle="modal" data-target="#trailer">
+    <p>
+    	A group of 11 men make a plan to rob three vegas casinos.
+    </p>
+    <div class="rating">
+    	<span class="stars-5" title="Rating : 5 Stars"></span>
+    </div>
+</div><!-- individual movie grid item -->
+<div class="col-md-3 col-lg-2 movie-tile" data-trailer-youtube-id="1hEZkkqjSfs" data-toggle="modal" data-target="#trailer">
     <img src="./img/poster-image-sharknado.jpg" width="220" height="342">
     <h2>Sharknado</h2>
-</div><div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="l13yPhimE3o" data-toggle="modal" data-target="#trailer">
+    <p>
+    	Tornados filled with sharks... Enough Said!
+    </p>
+    <div class="rating">
+    	<span class="stars-2" title="Rating : 2 Stars"></span>
+    </div>
+</div><!-- individual movie grid item -->
+<div class="col-md-3 col-lg-2 movie-tile" data-trailer-youtube-id="l13yPhimE3o" data-toggle="modal" data-target="#trailer">
     <img src="./img/poster-image-dumb-and-dumber.jpg" width="220" height="342">
     <h2>Dumb and Dumber</h2>
+    <p>
+    	Two friends travel across the country to deliver a lost suit	    case to a women. Jim Carrey and Jeff Daniels star in this comedy.
+    </p>
+    <div class="rating">
+    	<span class="stars-5" title="Rating : 5 Stars"></span>
+    </div>
 </div>
     </div>
   </body>

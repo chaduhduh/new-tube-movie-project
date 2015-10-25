@@ -5,7 +5,7 @@ import templater
 
 
 def create_movie_tiles_content(movies):
-    # Builds the HTML content for each individual movie item
+    """Builds the HTML content for each individual movie item"""
     content = ''
     for movie in movies:
         # Extract the youtube ID from the url
@@ -19,14 +19,17 @@ def create_movie_tiles_content(movies):
         # fill a movie item with 'this' round of data
         content += templater.fill_template("movie-item",
             {
-            "movie_title" : movie.title,
-            "poster_image_url" : movie.poster_image_url,
-            "trailer_youtube_id" : trailer_youtube_id
+                "movie_title" : movie.title,
+                "poster_image_url" : movie.poster_image_url,
+                "trailer_youtube_id" : trailer_youtube_id,
+                "storyline" : movie.storyline,
+                "rating" : movie.rating
             })
     return content
 
 
 def open_movies_page(movies):
+    """ Builds html page from a list of movies """
     # Create or overwrite the output file
     output_file = open('./fresh_tomatoes.html', 'w')
 
