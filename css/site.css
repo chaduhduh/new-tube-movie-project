@@ -6,6 +6,7 @@
 body {
     padding-top: 80px;
     background-color: #eee;
+    font-family: "Raleway", sans-serif;
 }
 .container{
     background-color: #fff;
@@ -108,4 +109,36 @@ body .navbar-inverse .navbar-brand:hover{
     max-width: 100%;
     position: relative;
     width: 1200px;
+}
+.footer{
+    text-align: center;
+    background-color: #fff;
+    border-top: solid 2px #ccc;
+    height: 70px;
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+}
+.footer a{
+    color: #ccc;
+    font-size: 20px;
+}
+/*media queries*/
+@media only screen and (max-width: 40.063em) {
+
+}
+@media only screen and (min-width: 40.063em) {
+    
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .movie-tile {
+        margin-bottom: 20px;
+        min-height: 595px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .movie-tile {
+        margin-bottom: 20px;
+        min-height: 480px;
+    }
 }
