@@ -42,9 +42,41 @@ dumb_and_dumber = media.Media({
 	"storyline" : "Two friends travel across the country to deliver a lost suit\
 	    case to a women. Jim Carrey and Jeff Daniels star in this comedy.",
 	"poster_image_url" : "./img/poster-image-dumb-and-dumber.jpg", 
-	"rating" : 5
+    "rating" : 5
 	})
 addMovie(video_list, dumb_and_dumber)
+
+beverly_hills_ninja = media.Media({
+	"title" : "Beverlly Hills Ninja", 
+	"trailer_youtube_url" : "https://www.youtube.com/watch?v=L7wjZZDmyhY",
+	"storyline" : "The story of the legendary white ninja. Is Hary really the \
+		white ninja? .. some say it is so.",
+	"poster_image_url" : "./img/poster-image-beverly-hills-ninja.jpg", 
+    "rating" : 5
+	})
+addMovie(video_list, beverly_hills_ninja)
+
+tommy_boy = media.Media({
+	"title" : "Tommy Boy", 
+	"trailer_youtube_url" : "https://www.youtube.com/watch?v=6nQ4K2bvVxY",
+	"storyline" : "After his dad's death, it is up to Tommy (Chris Farley) to\
+		save the future of his company.",
+	"poster_image_url" : "./img/poster-image-tommy-boy.jpg", 
+    "rating" : 5
+	})
+addMovie(video_list, tommy_boy)
+
+catch_me_if_you_can = media.Media({
+	"title" : "Catch Me if You Can", 
+	"trailer_youtube_url" : "https://www.youtube.com/watch?v=hFj3OXVL_wQ",
+	"storyline" : "After his parents divorce, a kid undertakes check fraud as \
+		a means to survive. Will one cops obsession laed to this boys arrest?",
+	"poster_image_url" : "./img/poster-image-catch-me-if-you-can.jpg", 
+    "rating" : 4
+	})
+addMovie(video_list, catch_me_if_you_can)
+
+
 
 #pass our movie list content to be used in page generation
 fresh_tomatoes.open_movies_page(video_list)
